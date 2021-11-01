@@ -7,12 +7,18 @@
 <div id="chart_div" style="width: 1280px; height: 1280px;"></div>
 
 <script>
+//10/31/2021 Sun
+
 const salaries = chicago.data;
 
 const generatePoints = function(){
 
 	const points  = [];
+
+	// item is each data in the array
+	// looping through all of them one by one
 	salaries.forEach(function(item){
+		// push object with two value pair into the array
 		points.push({
 			job    : item[9],
 			salary : Number(item[11])
@@ -20,7 +26,7 @@ const generatePoints = function(){
 	});
 
 	// order by salary
-	// points.sort(compare);
+	 points.sort(compare);
 
 	return points;
 };
@@ -32,8 +38,14 @@ function compare(a, b) {
  	//	you are you have written
  	//  the compare function
  	// --------------------------
-}
 
+	// Here we are sorting an array of objects, not the same as comparing an array of number
+	// we want to sort by salary so need to compare salary of each object
+	if (a.salary > b.salary) return 1;
+	if (a.salary < b.salary) return -1;
+	if (a.salary == b.salary) return 0;
+
+}
 
 window.onload = function run(){
 	const points = generatePoints();

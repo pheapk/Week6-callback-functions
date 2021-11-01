@@ -3,13 +3,17 @@
 <script src="payments_2005_to_2010.js"></script>
 <script>
 
+let payment = 0;
 function add(item){
 	// -----------------------------
 	//    YOUR CODE: write callback 
 	// -----------------------------
+	payment += Number(item["9"]);
+	console.log('Accumulate payment ' + payment);
+	return payment;
 }
 
-chicago.data.forEach(add);
-
+chicago.data.forEach(add); // call add function for each item in the object
+console.log("total payment: " + payment);
 </script>
 </html>

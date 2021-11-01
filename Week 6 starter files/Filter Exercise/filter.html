@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <script>
+//10/31/2021 Sun 
 
 const employees = [
   {name: 'peter', salary: 100000},
@@ -14,7 +15,12 @@ function isBigEnough(element) {
   return comparison;  	
 }
 
+// loop through the array for each item, 
+// call isBigEnough callback function each time which return true or false
+// filter returns the filtered arrya with callback's return value of true
 const filtered = employees.filter(isBigEnough);
+
+// [{"name":"peter","salary":100000},{"name":"bruce","salary":425000}]
 console.log(JSON.stringify(filtered));
 
 </script>

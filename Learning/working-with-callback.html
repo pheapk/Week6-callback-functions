@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<script>
+//10/31/2021 Sun
+
+// This is the array that contains numbers for you to work with
+var myArray = [1, 2, 5, 6, 12, 23, 15, 31];
+
+// This array should only contain even numbers
+var evenArray = [];
+
+// This code will call your function when the page loads up
+// Don't edit this function!
+window.onload = () => {
+  console.log(filterArray(myArray, isEvenCallBack)); // return [2,6,12]
+};
+
+function filterArray(myArray, isEvenCallBack) {
+  // TODO: use filterArray to determine if a number is even or odd.
+  //If the number is even, add it to the array 'evenArray'
+
+  // For each element in the array
+  // call isEvenCallBack function passing along the number from the array element
+  // to check whether the number is even or not
+  // if even return true, then add the number to the evenArray
+  myArray.forEach(number => {
+    if (isEvenCallBack(number)){
+      evenArray.push(number);
+    } 
+  });  
+  return evenArray;
+}
+
+// This function should return 'true' if a number is even and 'false' if a number is odd
+function isEvenCallBack(number) {
+  // TODO: use the mod operator (%) to determine if number is even or odd
+  return (number % 2 === 0) // even number returns true, else false
+}
+
+// Do not edit code past this point
+if (typeof module !== 'undefined') {
+  module.exports = { filterArray, isEvenCallBack };
+}
+</script>
+</html>

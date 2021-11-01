@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 <script>
-
+//10/31/2021 Sun
 const numbers = [1, 1, 2, 3, 5, 8];
 
 // add array items using reduce
+// previous: is previous item
+// current: is curren item
 const total = numbers.reduce(function(previous, current) {
 	//--------------------------
     //       YOUR CODE
     //--------------------------
-}, 0);
+
+    // after adding the sum will become previous for the next run
+    return previous + current; 
+}, 0); //0: default value
 
 // write to console
-console.log('total: ' + total);
+console.log('total: ' + total); //return 20
 
 </script>
 </html>

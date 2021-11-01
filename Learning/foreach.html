@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  const employees = [
+    {name: 'peter', salary:'10000'},
+    {name: 'bruce', salary: '125000'}
+  ];
+  let salaries = 0; 
+  function add(item, counter, array){
+    salaries += Number(item.salary);
+    //console.log(item);
+  }
+  // for each object in array, call 'add' function
+  employees.forEach(add);
+
+  //return total salary
+  console.log(salaries);
+
+</script>
+</html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <script>
+//10/31/2021 Sun
 
 // basic sample
 var numbers = [1, 4, 9, 16, 25];
@@ -9,13 +10,17 @@ function squareRoot(number){
     // ------------------------
     //     YOUR CODE
     // ------------------------    
+
+    // return squareroot of each number
+    return Math.sqrt(number);
 }
 
 // roots using map and callback
 var roots = numbers.map(squareRoot);
 
 // inspect array
-console.log(JSON.stringify(roots));
+// result [1,2,3,4,5]
+console.log(JSON.stringify(roots)); 
 
 </script>
 </html>

@@ -8,16 +8,27 @@
 <div id="chart_div" style="width: 1024px; height: 1600px;"></div>
 
 <script>
+//10/31/2021 Sun
 
 const graffiti = [];
 let matching;
 let obj;
 
 function graffitiReports(zip) {
+	//only return the data that match the zicode
+	// loop through all the data and run the function each time
+	// passing the data to "report" parameter
+	// return matching as an array with only the match zipcode 
 	matching = chicago.data.filter(function(report){
 		// ---------------------------
 		//		YOUR CODE
 		// ---------------------------
+		
+		// chicago.data is an array of information 
+		// item 16 of each element in the array is the zipcode
+		// we want to filter for the data that match the zipcode only
+		let match = report[16] == zip;
+		return match; // return true or false
 	});
 
 	obj = {};

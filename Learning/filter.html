@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<script>
+  const employees = [
+    {name: 'peter', salary : 1000000},
+    {name: 'bruce', salary: 425000},
+    {name: 'hanna', salary: 750000},
+    {name: 'james', salary: 555000}
+    ];
+
+    // note that the 'element' is not passed from the call.
+    // the callback applies to each element of the array
+    // so we don't need to use foreach in this case
+    function isBigEnough(element) {
+      let comparison = element.salary >= 500000;
+      return comparison; 
+    }
+
+     // has to return true or fale for the filter to doit's job
+    const filtered = employees.filter(isBigEnough);
+    console.log(JSON.stringify(filtered));
+
+
+
+</script>
+
+</html>
